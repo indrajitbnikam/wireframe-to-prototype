@@ -32,7 +32,7 @@ export default function Home() {
       <main
         className="flex flex-col items-center flex-1 w-full pb-20"
         style={{
-          maxWidth: '1400px'
+          maxWidth: '1600px'
         }}
       >
         <FirstSection />

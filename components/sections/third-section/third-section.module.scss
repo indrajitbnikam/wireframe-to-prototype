@@ -1,16 +1,32 @@
 .section {
   margin-top: 100px;
   width: 100%;
+  max-width: 1400px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 1400px) {
+    margin-top: 60px;
+  }
+
 
   .title {
     font-size: 64px;
     font-weight: 500;
     letter-spacing: 0.05em;
     margin-bottom: 10px;
+    text-align: center;
+
+    @media screen and (max-width: 1600px) {
+      font-size: 46px;
+      letter-spacing: 0.04em;
+    }
+    @media screen and (max-width: 1400px) {
+      font-size: 34px;
+      letter-spacing: 0.04em;
+    }
   }
 
   .subTitle {
@@ -19,11 +35,26 @@
     letter-spacing: 0.05em;
     color: #3a3a3a88;
     margin-bottom: 80px;
+    text-align: center;
+
+    @media screen and (max-width: 1400px) {
+      font-size: 16px;
+      letter-spacing: 0.03em;
+      margin-bottom: 60px;
+    }
   }
 
   .categories {
     display: flex;
     margin-bottom: 100px;
+
+    @media screen and (max-width: 1400px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
   }
 
   .category {
@@ -31,12 +62,22 @@
     width: 190px;
     display: grid;
     place-items: center;
+    font-size: 16px;
+    font-weight: 600;
     background-color: #F7F7F7;
     color: #3a3a3acc;
 
     transition: all .2s ease;
 
     margin: 0 16px;
+
+    @media screen and (max-width: 1400px) {
+      height: 40px;
+      width: 160px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 0 12px;
+    }
 
     &:hover {
       cursor: pointer;
@@ -63,6 +104,11 @@
         height: 15px;
         transform: rotate(45deg);
         background-color: #3A3A3A;
+
+        @media screen and (max-width: 1400px) {
+          width: 15px;
+          height: 15px;
+        }
       }
     }
   }
@@ -73,6 +119,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 20px;
+
+    @media screen and (max-width: 1400px) {
+      width: 820px;
+    }
+    @media screen and (max-width: 950px) {
+      width: 400px;
+    }
 
     .product_card {
       width: 400px;
@@ -107,6 +160,11 @@
 
     transition: all .2s ease;
 
+    @media screen and (max-width: 1400px) {
+      width: 120px;
+      height: 120px;
+    }
+
     &:hover {
       background-color: #3A3A3A;
       cursor: pointer;
@@ -121,6 +179,11 @@
       font-weight: 600;
       line-height: 21.94px;
       color: #3A3A3A;
+
+      @media screen and (max-width: 1400px) {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 }

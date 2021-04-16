@@ -1,10 +1,77 @@
+.header {
+  width: 100%;
+  max-width: 1600px;
+  height: 140px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 1700px) {
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 1400px) {
+    height: 160px;
+  }
+  @media screen and (max-width: 900px) {
+    height: 180px;
+  }
+}
+
+.left_items {
+  flex: 0 0 33%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  @media screen and (max-width: 1400px) {
+    flex: 0 0 60%;
+    padding-left: 50px;
+  }
+  @media screen and (max-width: 900px) {
+    flex: 0 0 100%;
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
+.logo {
+  flex: 0 0 34%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 1400px) {
+    order: -1;
+    flex: 1 0 100%;
+  }
+}
+
+.right_items {
+  flex: 0 0 33%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  @media screen and (max-width: 1400px) {
+    flex: 0 0 40%;
+    padding-right: 50px;
+  }
+  @media screen and (max-width: 900px) {
+    flex: 0 0 100%;
+    justify-content: center;
+    padding-right: 0;
+  }
+}
+
 .nav_item_left {
   // margin-right: 10px;
   font-size: 18px;
-  line-height: 21.94px;
+  line-height: 120%;
   font-weight: 400;
   margin: 0 20px;
   transition: all .2s ease;
+
+  @media screen and (max-width: 1400px) {
+    font-size: 16px;
+  }
 
   &:hover {
     color: #b09e80;
@@ -20,6 +87,11 @@
   position: relative;
   margin: 0 20px;
   transition: all .2s ease;
+
+  @media screen and (max-width: 1400px) {
+    height: 20px;
+    width: 20px;
+  }
 
   &:hover {
     cursor: pointer;

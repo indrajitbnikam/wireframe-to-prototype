@@ -16,6 +16,10 @@
     background-color: #F7F7F7;
     padding: 0 50px;
 
+    @media screen and (max-width: 1600px) {
+      display: none;
+    }
+
     .service_container {
       width: 100%;
       max-width: 1600px;
@@ -41,5 +45,18 @@
     flex-direction: column;
     justify-content: center;
     margin-left: 16px;
+  }
+}
+
+.copyright_text {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(75, 85, 99, 1);
+  margin-left: 4px;
+
+  @media screen and (max-width: 900px) {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
   }
 }

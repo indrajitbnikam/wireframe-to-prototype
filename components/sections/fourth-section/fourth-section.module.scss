@@ -1,13 +1,35 @@
 .section {
   margin: 100px auto 0;
+  max-width: 1400px;
 
   display: grid;
   grid-template-columns: repeat(100, 14px);
   grid-template-rows: repeat(100, 8px);
 
+  @media screen and (max-width: 1600px) {
+    grid-template-columns: repeat(100, 12px);
+    grid-template-rows: repeat(100, 8px);
+  }
+  @media screen and (max-width: 1400px) {
+    margin-top: 60px;
+    grid-template-columns: repeat(100, 8px);
+    grid-template-rows: repeat(100, 6px);
+  }
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .first_section {
     grid-column: 1 / 55;
     grid-row: 1 / 40;
+
+    @media screen and (max-width: 900px) {
+      height: 240px;
+      width: 400px;
+    }
 
     display: flex;
     flex-direction: column;
@@ -20,6 +42,17 @@
       line-height: 87.77px;
       color: #3A3A3A;
       margin-bottom: 20px;
+
+      @media screen and (max-width: 1600px) {
+        font-size: 46px;
+        letter-spacing: 0.04em;
+        line-height: 50px;
+      }
+      @media screen and (max-width: 1400px) {
+        font-size: 34px;
+        letter-spacing: 0.03em;
+        line-height: 36px;
+      }
     }
   }
 
@@ -28,6 +61,11 @@
     grid-row: 40 / 101;
 
     position: relative;
+
+    @media screen and (max-width: 900px) {
+      height: 300px;
+      width: 400px;
+    }
   }
 
   .third_section {
@@ -35,6 +73,11 @@
     grid-row: 1 / 60;
 
     position: relative;
+
+    @media screen and (max-width: 900px) {
+      height: 300px;
+      width: 400px;
+    }
   }
 
   .fourth_section {
@@ -42,8 +85,13 @@
     grid-row: 60 / 101;
 
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @media screen and (max-width: 900px) {
+      height: 240px;
+      width: 400px;
+    }
   }
 }
 
@@ -56,28 +104,51 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @media screen and (max-width: 1400px) {
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+  }
+
   &.first_card {
     background-color: #f5ddc3;
     color: rgba(58, 58, 58, .8);
     padding: 30px 150px 30px 30px;
+
+    @media screen and (max-width: 1400px) {
+      padding: 20px;
+    }
   }
 
   &.second_card {
     background-color: #be885e;
     color: #FFF;
     padding: 30px 200px 30px 30px;
+
+    @media screen and (max-width: 1400px) {
+      padding: 20px;
+    }
   }
 
   .text_one {
     font-size: 18px;
     line-height: 22px;
     font-weight: 600;
+
+    @media screen and (max-width: 1400px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   .text_two {
     font-size: 55px;
     line-height: 67px;
     font-weight: 700;
+
+    @media screen and (max-width: 1400px) {
+      font-size: 40px;
+      line-height: 46px;
+    }
   }
 
   .text_three {
@@ -86,6 +157,11 @@
     font-weight: 600;
     text-decoration-line: underline;
     transition: all .2s ease;
+
+    @media screen and (max-width: 1400px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
 
     &:hover {
       cursor: pointer;
@@ -96,6 +172,9 @@
 
 .image {
   position: absolute;
+  @media screen and (max-width: 1400px) {
+    display: none;
+  }
 
   &.first_image {
     bottom: 0;
@@ -112,7 +191,11 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 120%;
-  color: #3a3a3a80
+  color: #3a3a3a80;
+
+  @media screen and (max-width: 1400px) {
+    font-size: 14px;
+  }
 }
 
 .subscribe_form {
@@ -126,6 +209,12 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @media screen and (max-width: 1400px) {
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    padding: 18px;
+  }
+
   .subscribe_text {
 
     .secondary_title {
@@ -135,6 +224,12 @@
       line-height: 120%;
       color: #3A3A3A;
       margin-bottom: 10px;
+
+      @media screen and (max-width: 1400px) {
+        font-size: 32px;
+        letter-spacing: 0.04em;
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -143,12 +238,20 @@
     padding-left: 10px;
     display: flex;
 
+    @media screen and (max-width: 1400px) {
+      padding-left: 6px;
+    }
+
     .input {
       flex-grow: 1;
       color: #3a3a3a4d;
       font-size: 18px;
       line-height: 120%;
       font-weight: 400;
+
+      @media screen and (max-width: 1400px) {
+        font-size: 14px;
+      }
 
       &::placeholder {
         color: #3a3a3a4d;
@@ -165,6 +268,10 @@
       font-size: 18px;
       line-height: 120%;
       transition: all .2s ease;
+
+      @media screen and (max-width: 1400px) {
+        font-size: 14px;
+      }
 
       &:hover {
         background-color: #b09e80;

@@ -36,8 +36,8 @@ const FifthSection = () => {
               layout='fixed'
             />
           </div>
-          <span className={name}>FAST DELIVERY</span>
-          <span className={description}>One day delivery available</span>
+          <span className={name}>HIGH QUALITY</span>
+          <span className={description}>Best in class manufacturing</span>
         </div>
         <div className={service}>
           <div className={image}>
@@ -48,8 +48,8 @@ const FifthSection = () => {
               layout='fixed'
             />
           </div>
-          <span className={name}>FAST DELIVERY</span>
-          <span className={description}>One day delivery available</span>
+          <span className={name}>RETURN POLICY</span>
+          <span className={description}>10 day return policy</span>
         </div>
         <div className={service}>
           <div className={image}>
@@ -60,8 +60,8 @@ const FifthSection = () => {
               layout='fixed'
             />
           </div>
-          <span className={name}>FAST DELIVERY</span>
-          <span className={description}>One day delivery available</span>
+          <span className={name}>24x7 SUPPORT</span>
+          <span className={description}>Live chat with service support</span>
         </div>
       </div>
     </div>

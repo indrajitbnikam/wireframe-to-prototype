@@ -1,12 +1,26 @@
 .section {
   margin: 100px auto 0;
   width: 100%;
+  max-width: 1400px;
+
+  @media screen and (max-width: 1400px) {
+    margin-top: 60px;
+    width: 820px;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 400px;
+  }
 
   .services {
     width: 100%;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    @media screen and (max-width: 1400px) {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
 
     .service {
       display: flex;
@@ -24,12 +38,20 @@
         font-weight: 500;
 
         color: #3A3A3A;
+
+        @media screen and (max-width: 1400px) {
+          font-size: 20px;
+        }
       }
 
       .description {
         font-size: 18px;
         font-weight: 400;
         color: #3a3a3a99;
+
+        @media screen and (max-width: 1400px) {
+          font-size: 14px;
+        }
       }
     }
   }

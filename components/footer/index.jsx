@@ -8,7 +8,8 @@ const {
   service_container,
   services,
   image_container,
-  text_container
+  text_container,
+  copyright_text
 } = styles;
 
 const Footer = () => {
@@ -58,8 +59,8 @@ const Footer = () => {
           width='16'
           height='16'
         />
-        <p className='text-lg text-gray-600'>
-          2020 Copyright Woodstock Furniture. All Rights Reserved
+        <p className={copyright_text}>
+          2020 Copyright Woodstock Furniture. All Rights Reserved.
         </p>
       </div>
     </footer>

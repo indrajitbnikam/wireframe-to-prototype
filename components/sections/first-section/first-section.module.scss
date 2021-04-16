@@ -5,6 +5,15 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  @media screen and (max-width: 1400px) {
+    height: 700px;
+  }
+
+  @media screen and (max-width: 900px) {
+    height: 500px;
+  }
+
 }
 
 .cta {
@@ -17,12 +26,41 @@
 
   padding-right: 50%;
   padding-bottom: 20%;
+
+  @media screen and (max-width: 1800px) {
+    padding-left: 50px;
+  }
+
+  @media screen and (max-width: 1600px) {
+    padding-bottom: 30%;
+    padding-right: 50%;
+    padding-left: 100px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    padding: 0;
+    align-items: center;
+    background-image: linear-gradient(180deg, rgba(238, 214, 176, 0.8) 0%, rgba(255, 255, 255, .5) 100%), url('/assets/landing-section.png');
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  }
+
   .cta_text {
     font-size: 100px;
     font-weight: 600;
     letter-spacing: .1em;
     line-height: 100%;
     margin-bottom: 28px;
+
+    @media screen and (max-width: 1600px) {
+      font-size: 60px;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 40px;
+      letter-spacing: 0;
+    }
   }
 
   .cta_button {
@@ -35,6 +73,18 @@
     letter-spacing: 0.4rem;
     color: #fff;
     transition: all .2s;
+
+    @media screen and (max-width: 1400px) {
+      font-size: 16px;
+      letter-spacing: 0.3rem;
+      padding: 10px 16px;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 14px;
+      letter-spacing: 0.2rem;
+      padding: 8px 12px;
+    }
 
     &:hover {
       cursor: pointer;
@@ -53,6 +103,11 @@
   font-size: 18px;
   letter-spacing: .1em;
   font-weight: 600;
+  position: relative;
+
+  @media screen and (max-width: 1400px) {
+    display: none;
+  }
 
   & > a {
     animation: bounce .8s ease-in alternate infinite;
@@ -66,12 +121,42 @@
       }
     }
   }
+
+  .slider_buttons {
+    position: absolute;
+    height: 100%;
+    width: 200px;
+
+    right: 0;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media screen and (max-width: 1400px) {
+      display: none;
+    }
+
+    & > div {
+      margin-right: 40px !important;
+    }
+
+    div {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .image_container {
   position: absolute;
-  right: -300px;
+  right: 0;
   z-index: -999;
+
+  @media screen and (max-width: 1400px) {
+    display: none;
+  }
 
   & > div {
     position: relative;
@@ -80,39 +165,25 @@
       position: absolute;
       height: 80px;
       width: 100%;
+      padding-left: 20px;
       bottom: 60px;
       display: flex;
-      justify-content: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
 
       background-image: linear-gradient(90.04deg, #FFFFFF 0.03%, rgba(255, 255, 255, 0) 99.98%);
 
-      .left_half {
-        padding-left: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-
-        .description {
-          font-size: 18px;
-          font-weight: 500;
-          color: rgba(58, 58, 58, 1);
-        }
-
-        .price {
-          font-size: 18px;
-          font-weight: 400;
-          color: rgba(58, 58, 58, 1);
-        }
+      .description {
+        font-size: 18px;
+        font-weight: 500;
+        color: rgba(58, 58, 58, 1);
       }
 
-      .right_half {
-        margin-left: 300px;
-        font-size: 24px;
-        font-weight: 600;
-        color: #fff;
-        display: grid;
-        place-items: center;
+      .price {
+        font-size: 18px;
+        font-weight: 400;
+        color: rgba(58, 58, 58, 1);
       }
     }
   }

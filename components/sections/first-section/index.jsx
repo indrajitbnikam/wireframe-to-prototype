@@ -9,11 +9,10 @@ const {
   cta_button,
   image_container,
   image_info,
-  left_half,
   description,
   price,
-  right_half,
-  section_footer
+  section_footer,
+  slider_buttons
 } = styles;
 
 const FirstSection = () => {
@@ -32,22 +31,29 @@ const FirstSection = () => {
             layout='fixed'
           />
           <div className={image_info}>
-            <div className={left_half}>
-              <p className={description}>
-                LIVING ROOM DECOR COLLECTION
-              </p>
-              <p className={price}>
-                STARTS FROM $114.5
-              </p>
-            </div>
-            <div className={right_half}>
-              {/** <p>&larr;{'  '}&rarr;</p> */}
-            </div>
+            <p className={description}>
+              LIVING ROOM DECOR COLLECTION
+            </p>
+            <p className={price}>
+              STARTS FROM $114.5
+            </p>
           </div>
         </div>
       </div>
       <div className={section_footer}>
         <a href='#shop'>Scroll</a>
+        <div className={slider_buttons}>
+          <Image
+            src='/assets/arrow-left.png'
+            width={34}
+            height={35}
+          />
+          <Image
+            src='/assets/arrow-right.png'
+            width={34}
+            height={35}
+          />
+        </div>
       </div>
     </div>
   )

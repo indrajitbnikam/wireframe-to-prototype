@@ -2,11 +2,32 @@
   margin: 100px auto 0;
   width: 100%;
 
+  @media screen and (max-width: 1600px) {
+    margin-top: 60px;
+  }
+
   .link_groups {
     width: 100%;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    @media screen and (max-width: 1600px) {
+      width: 1000px;
+      margin: auto;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 0;
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 600px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    @media screen and (max-width: 700px) {
+      width: 300px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 
     .link_group {
       display: flex;
@@ -15,6 +36,7 @@
       padding: 20px;
 
       .header {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -27,6 +49,17 @@
         color: rgba(176, 158, 128, 1);
 
         margin-bottom: 30px;
+
+        @media screen and (max-width: 1600px) {
+          margin-bottom: 20px;
+          font-size: 18px;
+        }
+
+        @media screen and (max-width: 700px) {
+          margin-bottom: 18px;
+          font-size: 18px;
+        }
+
       }
 
       .content {
@@ -41,6 +74,10 @@
         line-height: 120%;
 
         color: rgba(58, 58, 58, 0.6);
+
+        @media screen and (max-width: 1400px) {
+          font-size: 14px;
+        }
 
         .link {
           &:hover {
