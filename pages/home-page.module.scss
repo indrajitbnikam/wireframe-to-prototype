@@ -1,0 +1,9 @@
+.left_most_bar {
+  position: absolute;
+  height: 100%;
+  width: 13px;
+  top: 0;
+  left: 0;
+  // background-color: teal;
+  background-image: linear-gradient(180deg, #B09E80 0%, rgba(179, 160, 126, 0) 25%, rgba(0, 0, 0, 0) 100%);;
+}
